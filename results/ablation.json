@@ -1,0 +1,220 @@
+{
+  "protocol": "dase7506-mp2-open-hard-verifier-v5",
+  "note": "trained on train groups with >=1 wrong candidate; test used for reporting only",
+  "baselines": {
+    "index 0 (no method)": {
+      "validation": {
+        "accuracy": 78.2,
+        "accuracy_ambiguous": 54.93,
+        "correct": 624,
+        "n": 798
+      },
+      "test": {
+        "accuracy": 49.68,
+        "accuracy_ambiguous": 49.68,
+        "correct": 232,
+        "n": 467
+      }
+    },
+    "majority vote": {
+      "validation": {
+        "accuracy": 86.22,
+        "accuracy_ambiguous": 69.01,
+        "correct": 688,
+        "n": 798
+      },
+      "test": {
+        "accuracy": 69.16,
+        "accuracy_ambiguous": 69.16,
+        "correct": 323,
+        "n": 467
+      }
+    }
+  },
+  "ablations": {
+    "emb only": {
+      "validation": {
+        "accuracy": 89.97,
+        "accuracy_ambiguous": 78.59,
+        "correct": 718,
+        "n": 798
+      },
+      "test": {
+        "accuracy": 77.73,
+        "accuracy_ambiguous": 77.73,
+        "correct": 363,
+        "n": 467
+      }
+    },
+    "center only": {
+      "validation": {
+        "accuracy": 91.1,
+        "accuracy_ambiguous": 81.41,
+        "correct": 727,
+        "n": 798
+      },
+      "test": {
+        "accuracy": 81.16,
+        "accuracy_ambiguous": 81.16,
+        "correct": 379,
+        "n": 467
+      }
+    },
+    "sim only": {
+      "validation": {
+        "accuracy": 80.58,
+        "accuracy_ambiguous": 57.75,
+        "correct": 643,
+        "n": 798
+      },
+      "test": {
+        "accuracy": 58.24,
+        "accuracy_ambiguous": 58.24,
+        "correct": 272,
+        "n": 467
+      }
+    },
+    "text only (all)": {
+      "validation": {
+        "accuracy": 84.71,
+        "accuracy_ambiguous": 65.63,
+        "correct": 676,
+        "n": 798
+      },
+      "test": {
+        "accuracy": 61.03,
+        "accuracy_ambiguous": 61.03,
+        "correct": 285,
+        "n": 467
+      }
+    },
+    "text: structure+arithmetic": {
+      "validation": {
+        "accuracy": 80.2,
+        "accuracy_ambiguous": 60.85,
+        "correct": 640,
+        "n": 798
+      },
+      "test": {
+        "accuracy": 56.1,
+        "accuracy_ambiguous": 56.1,
+        "correct": 262,
+        "n": 467
+      }
+    },
+    "text: format markers": {
+      "validation": {
+        "accuracy": 83.21,
+        "accuracy_ambiguous": 62.54,
+        "correct": 664,
+        "n": 798
+      },
+      "test": {
+        "accuracy": 62.31,
+        "accuracy_ambiguous": 62.31,
+        "correct": 291,
+        "n": 467
+      }
+    },
+    "text: answer plausibility": {
+      "validation": {
+        "accuracy": 75.56,
+        "accuracy_ambiguous": 45.07,
+        "correct": 603,
+        "n": 798
+      },
+      "test": {
+        "accuracy": 42.61,
+        "accuracy_ambiguous": 42.61,
+        "correct": 199,
+        "n": 467
+      }
+    },
+    "emb+text": {
+      "validation": {
+        "accuracy": 92.36,
+        "accuracy_ambiguous": 82.82,
+        "correct": 737,
+        "n": 798
+      },
+      "test": {
+        "accuracy": 79.23,
+        "accuracy_ambiguous": 79.23,
+        "correct": 370,
+        "n": 467
+      }
+    },
+    "emb+text+sim": {
+      "validation": {
+        "accuracy": 92.11,
+        "accuracy_ambiguous": 82.25,
+        "correct": 735,
+        "n": 798
+      },
+      "test": {
+        "accuracy": 80.73,
+        "accuracy_ambiguous": 80.73,
+        "correct": 377,
+        "n": 467
+      }
+    },
+    "center+text+sim": {
+      "validation": {
+        "accuracy": 91.85,
+        "accuracy_ambiguous": 81.69,
+        "correct": 733,
+        "n": 798
+      },
+      "test": {
+        "accuracy": 82.23,
+        "accuracy_ambiguous": 82.23,
+        "correct": 384,
+        "n": 467
+      }
+    }
+  },
+  "final_ensemble": {
+    "validation": {
+      "accuracy": 92.36,
+      "correct": 737,
+      "n": 798,
+      "by_distinct_answers": {
+        "nuniq=1": {
+          "n": 443,
+          "accuracy": 100.0
+        },
+        "nuniq=2": {
+          "n": 227,
+          "accuracy": 88.55
+        },
+        "nuniq=3": {
+          "n": 108,
+          "accuracy": 74.07
+        },
+        "nuniq=4": {
+          "n": 20,
+          "accuracy": 65.0
+        }
+      }
+    },
+    "test": {
+      "accuracy": 82.23,
+      "correct": 384,
+      "n": 467,
+      "by_distinct_answers": {
+        "nuniq=2": {
+          "n": 303,
+          "accuracy": 87.79
+        },
+        "nuniq=3": {
+          "n": 126,
+          "accuracy": 76.19
+        },
+        "nuniq=4": {
+          "n": 38,
+          "accuracy": 57.89
+        }
+      }
+    }
+  }
+}
